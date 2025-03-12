@@ -31,7 +31,7 @@ Installation
 Clone the repository:
 
 Copy
-git clone https://github.com/your-username/sn-elegancy-website.git
+git clone https://github.com/tuyizereerneste/sn-elegancy-website.git
 cd sn-elegancy-website
 Install the dependencies:
 
