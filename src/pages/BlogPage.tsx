@@ -1,32 +1,53 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Calendar, User, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
-const BlogPage = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "2024 Interior Design Trends: Blending Comfort with Sophistication",
-      excerpt: "Discover the latest interior design trends that are shaping homes and workspaces in 2024. From sustainable materials to smart home integration, we explore how modern design is evolving.",
-      image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop",
-      author: "Sarah Norton",
-      date: "March 15, 2024",
-      category: "Design Trends"
-    },
-    {
-      id: 2,
-      title: "Maximizing Small Spaces: Smart Design Solutions",
-      excerpt: "Learn innovative approaches to make the most of compact living spaces. Our expert designers share their top tips for creating functional and beautiful small-space interiors.",
-      image: "https://images.unsplash.com/photo-1617104424032-b9bd6972d0e4?q=80&w=1000&auto=format&fit=crop",
-      author: "Michael Chen",
-      date: "March 10, 2024",
-      category: "Space Planning"
-    }
-  ];
+// Define the type for the blog post
+interface BlogPost {
+  id: string;
+  author: string;
+  sector: string;
+  title: string;
+  content: string;
+  image: string;
+  createdAt: string; // Date string from the backend
+}
+
+// Define the type for the response from the backend
+interface BlogResponse {
+  blogs: BlogPost[];
+}
+
+const BlogPage: React.FC = () => {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        // Explicitly define the response type here
+        const response = await axios.get<BlogResponse>("http://localhost:3000/blogs");
+        setBlogPosts(response.data.blogs); // TypeScript will now know the structure
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
+  // Function to format the date into a readable format
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  };
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 mt-8">
       <section className="py-20 bg-primary text-white">
         <div className="container">
           <motion.div
@@ -53,37 +74,36 @@ const BlogPage = () => {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="bg-white rounded-lg overflow-hidden shadow-lg"
               >
-                <div className="relative h-64">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm">
-                    {post.category}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
-                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center text-sm text-gray-500">
-                      <User className="h-4 w-4 mr-2" />
-                      {post.author}
-                    </div>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      {post.date}
+                <Link to={`/blog/${post.id}`}>
+                  <div className="relative h-64">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm">
+                      {post.sector}
                     </div>
                   </div>
-                  <Link
-                    to={`/blog/${post.id}`}
-                    className="inline-flex items-center text-primary font-semibold hover:text-primary-dark"
-                  >
-                    Read More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
+                  <div className="p-6">
+                    <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
+                    <p className="text-gray-600 mb-4">{post.content}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center text-sm text-gray-500">
+                        <User className="h-4 w-4 mr-2" />
+                        {post.author}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        {formatDate(post.createdAt)} {/* Display formatted date */}
+                      </div>
+                    </div>
+                    <div className="flex items-center text-primary font-semibold hover:text-primary-dark">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </div>
+                  </div>
+                </Link>
               </motion.article>
             ))}
           </div>

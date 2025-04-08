@@ -1,8 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import axios from 'axios';
 
 const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [responseMessage, setResponseMessage] = useState('');
+
+  // Handle input change
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setResponseMessage('');
+
+    try {
+      interface ContactResponse {
+        message: string;
+      }
+
+      const response = await axios.post<ContactResponse>('http://localhost:3000/message/create', formData);
+
+      if (response.data.message) {
+        setResponseMessage('Your message has been sent successfully!');
+      }
+    } catch (error) {
+      setResponseMessage('Error sending message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="pt-20">
       <section className="py-20 bg-primary text-white">
@@ -86,7 +128,7 @@ const ContactPage: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <form className="bg-white p-8 rounded-lg shadow-lg">
+              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-bold mb-6 text-primary">Send Us a Message</h3>
                 <div className="space-y-6">
                   <div>
@@ -96,6 +138,8 @@ const ContactPage: React.FC = () => {
                     <input
                       type="text"
                       id="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       placeholder="John Doe"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
@@ -107,6 +151,8 @@ const ContactPage: React.FC = () => {
                     <input
                       type="email"
                       id="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       placeholder="john@example.com"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
@@ -118,6 +164,8 @@ const ContactPage: React.FC = () => {
                     <input
                       type="tel"
                       id="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       placeholder="+1 (555) 000-0000"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
@@ -129,14 +177,26 @@ const ContactPage: React.FC = () => {
                     <textarea
                       id="message"
                       rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
                       placeholder="Tell us about your project..."
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
                   </div>
-                  <button type="submit" className="w-full btn-primary">
-                    Send Message
+                  <button
+                    type="submit"
+                    className={`w-full btn-primary ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
+
+                {responseMessage && (
+                  <div className="mt-6 text-center text-gray-600">
+                    <p>{responseMessage}</p>
+                  </div>
+                )}
               </form>
             </motion.div>
           </div>
