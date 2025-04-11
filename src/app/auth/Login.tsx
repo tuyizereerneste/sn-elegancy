@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Eye, EyeOff, Lock, Mail } from 'lucide-react';
-import { Sprout } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 
 interface LoginResponse {
     token: string;
@@ -56,9 +55,8 @@ const Login: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post<LoginResponse>('http://localhost:3000/auth/login', formData);
+      const response = await axios.post<LoginResponse>('https://sn-elegancy-project.onrender.com/auth/login', formData);
       
-      // Assuming response contains a token
       const { token } = response.data;
       localStorage.setItem('token', token);
 
