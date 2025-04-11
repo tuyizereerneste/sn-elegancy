@@ -33,7 +33,7 @@ const Messages: React.FC = () => {
           contactMessages: ContactMessage[];
         }
 
-        const response = await axios.get<MessagesResponse>("http://localhost:3000/messages", {
+        const response = await axios.get<MessagesResponse>("https://sn-elegancy-project.onrender.com/messages", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -57,7 +57,7 @@ const MessageDetails: React.FC = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:3000/message/${id}`, {
+      await axios.delete(`https://sn-elegancy-project.onrender.com/message/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

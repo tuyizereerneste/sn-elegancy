@@ -4,10 +4,10 @@ import { Award, Users, Clock, Target } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const stats = [
-    { icon: Award, label: 'Years of Experience', value: '15+' },
+    { icon: Award, label: 'Years of Experience', value: '5+' },
     { icon: Users, label: 'Happy Clients', value: '500+' },
-    { icon: Clock, label: 'Projects Completed', value: '1000+' },
-    { icon: Target, label: 'Design Awards', value: '25+' },
+    { icon: Clock, label: 'Projects Completed', value: '10+' },
+    { icon: Target, label: 'Design Awards', value: '2+' },
   ];
 
   const team = [
@@ -84,17 +84,17 @@ const AboutPage: React.FC = () => {
               <h2 className="text-4xl font-bold mb-6 text-primary">Our Story</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Founded in 2008, SN Elegancy has grown from a small design studio
-                  to one of the most respected names in interior design and renovation.
+                What began as a passion for design has evolved into a trusted name in interior design and 
+                renovation. Our reputation is built on a foundation of creativity, craftsmanship, and a 
+                deep understanding of our clients' unique visions.
                 </p>
                 <p>
-                  Our journey has been defined by our unwavering commitment to excellence,
-                  innovation, and our clients' satisfaction. We believe that every space
-                  has a story to tell, and we're here to help tell it beautifully.
+                We believe every space holds the potential to inspire, and we're here to unlock that 
+                potential—beautifully and intentionally.
                 </p>
                 <p>
-                  Today, we continue to push boundaries and set new standards in the
-                  industry, bringing dreams to life one space at a time.
+                From cozy homes to bold commercial spaces, we bring dreams to life, one room at a time—redefining 
+                elegance, setting trends, and exceeding expectations every step of the way.
                 </p>
               </div>
             </motion.div>

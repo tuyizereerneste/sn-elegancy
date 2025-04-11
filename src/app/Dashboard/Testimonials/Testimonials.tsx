@@ -22,7 +22,7 @@ const Testimonials: React.FC = () => {
   const fetchTestimonials = async () => {
     setLoading(true);
     try {
-      const res = await axios.get<{ testimony: Testimonial[] }>("http://localhost:3000/testimonies");
+      const res = await axios.get<{ testimony: Testimonial[] }>("https://sn-elegancy-project.onrender.com/testimonies");
       setTestimonials(res.data.testimony);
     } catch (err) {
       console.error("Failed to fetch testimonials:", err);
@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
         <CreateTestimonyForm
           onClose={() => {
             setIsOpen(false);
-            fetchTestimonials(); // Refresh after creating
+            fetchTestimonials();
           }}
         />
       )}

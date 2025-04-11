@@ -24,7 +24,7 @@ const Blogs: React.FC = () => {
     const fetchBlogs = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get<{ blogs: Blog[] }>("http://localhost:3000/blogs", {
+        const response = await axios.get<{ blogs: Blog[] }>("https://sn-elegancy-project.onrender.com/blogs", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

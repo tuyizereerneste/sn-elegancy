@@ -7,7 +7,6 @@ const Dashboard: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
 
-  // Close sidebar when route changes (on mobile)
   React.useEffect(() => {
     setIsSidebarOpen(false);
   }, [location.pathname]);
@@ -35,7 +34,7 @@ const Dashboard: React.FC = () => {
                 <Link
                   to={item.to}
                   className="flex items-center p-2 rounded hover:bg-gray-700"
-                  onClick={() => setIsSidebarOpen(false)} // close sidebar on link click
+                  onClick={() => setIsSidebarOpen(false)}
                 >
                   {item.label}
                 </Link>

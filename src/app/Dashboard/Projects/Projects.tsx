@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
     const fetchProjects = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get<{ projects: Project[] }>("http://localhost:3000/projects", {
+        const response = await axios.get<{ projects: Project[] }>("https://sn-elegancy-project.onrender.com/projects", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

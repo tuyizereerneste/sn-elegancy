@@ -29,9 +29,9 @@ const TestimonyDetails: React.FC = () => {
   useEffect(() => {
     const fetchTestimony = async () => {
       try {
-        const token = localStorage.getItem("token"); // adjust if stored elsewhere
+        const token = localStorage.getItem("token");
   
-        const res = await axios.get<{ testimony: Testimonial }>(`http://localhost:3000/testimonies/${id}`, {
+        const res = await axios.get<{ testimony: Testimonial }>(`https://sn-elegancy-project.onrender.com/testimonies/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -70,7 +70,7 @@ const TestimonyDetails: React.FC = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3000/testimonies/${id}`);
+      await axios.delete(`https://sn-elegancy-project.onrender.com/testimonies/${id}`);
       navigate('/dashboard/testimonials');
     } catch (err) {
       console.error("Failed to delete testimony:", err);
@@ -79,7 +79,7 @@ const TestimonyDetails: React.FC = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:3000/testimonies/${id}`, formData);
+      await axios.put(`https://sn-elegancy-project.onrender.com/testimonies/${id}`, formData);
       setTestimony({ ...testimony!, ...formData });
       setIsEditing(false);
     } catch (error) {

@@ -37,7 +37,7 @@ const CreateTestimonyForm: React.FC<CreateTestimonyFormProps> = ({ onClose }) =>
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/testimonies/create", formData, {
+      const response = await axios.post("https://sn-elegancy-project.onrender.com/testimonies/create", formData, {
         headers: {
           "Authorization": `Bearer ${token}`,
           "Content-Type": "multipart/form-data",

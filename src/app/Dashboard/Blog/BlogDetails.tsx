@@ -40,7 +40,7 @@ const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ onClose }) => {
 
     try {
       const token = localStorage.getItem('token'); // Assuming you have a token stored
-      const response = await axios.post("http://localhost:3000/blog/create", formData, {
+      const response = await axios.post("https://sn-elegancy-project.onrender.com/blog/create", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

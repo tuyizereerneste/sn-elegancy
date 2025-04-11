@@ -31,7 +31,7 @@ const ProjectDetails: React.FC = () => {
       try {
         const token = localStorage.getItem('token');
         console.log('Token:', token);
-        const response = await axios.get<Project>(`http://localhost:3000/project/${id}`, {
+        const response = await axios.get<Project>(`https://sn-elegancy-project.onrender.com/project/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -81,7 +81,7 @@ const ProjectDetails: React.FC = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put<{ project: Project }>(
-        `http://localhost:3000/project/${id}`,
+        `https://sn-elegancy-project.onrender.com/project/${id}`,
         formData,
         {
           headers: {
@@ -99,7 +99,7 @@ const ProjectDetails: React.FC = () => {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:3000/project/${id}`, {
+      await axios.delete(`https://sn-elegancy-project.onrender.com/project/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

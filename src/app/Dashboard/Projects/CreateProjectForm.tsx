@@ -34,7 +34,7 @@ const CreateProjectForm: React.FC<CreateProjectFormProps> = ({ onClose }) => {
     });
 
     try {
-      const response = await axios.post("http://localhost:3000/project/create", formData, {
+      const response = await axios.post("https://sn-elegancy-project.onrender.com/project/create", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

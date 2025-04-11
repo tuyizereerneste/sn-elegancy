@@ -19,7 +19,7 @@ const ProjectDetailsPage: React.FC = () => {
     const fetchProject = async () => {
       try {
         const response = await axios.get<Project>(
-          `http://localhost:3000/project/${id}`
+          `https://sn-elegancy-project.onrender.com/project/${id}`
         );
         setProject(response.data);
       } catch (error) {

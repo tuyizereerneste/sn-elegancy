@@ -27,7 +27,7 @@ const BlogPage: React.FC = () => {
     const fetchBlogs = async () => {
       try {
         // Explicitly define the response type here
-        const response = await axios.get<BlogResponse>("http://localhost:3000/blogs");
+        const response = await axios.get<BlogResponse>("https://sn-elegancy-project.onrender.com/blogs");
         setBlogPosts(response.data.blogs); // TypeScript will now know the structure
       } catch (error) {
         console.error("Error fetching blogs:", error);
