@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 interface Project {
   title: string;
@@ -74,11 +73,9 @@ const FeaturedProjectsSection: React.FC = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          <Link to="/portfolio" className="col-span-3 text-center mb-8">
           {featuredProjects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}
-          </Link>
         </div>
       </div>
     </section>
