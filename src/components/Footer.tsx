@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-primary mt-12 text-white">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
               <a href="#" className="hover:text-gray-300 transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="hover:text-gray-300 transition-colors">
+              <a href=" https://www.instagram.com/sn_elegancy_abidjan?igsh=MXFnaXV3aGc4N3Z5bA==&utm_source=ig_contact_invite" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-6 w-6" />
               </a>
               <a href="#" className="hover:text-gray-300 transition-colors">
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+225 0713131355</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2" />
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <MapPin className="h-5 w-5 mr-2" />
-                <span>123 Design Street, Creative City, ST 12345</span>
+                <span>8éme tranche Angres, Abidjan</span>
               </li>
             </ul>
           </div>

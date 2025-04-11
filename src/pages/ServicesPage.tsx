@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Paintbrush, Home, Ruler, Sofa, Clock, Settings } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServicesPage: React.FC = () => {
   const services = [
@@ -134,9 +135,9 @@ const ServicesPage: React.FC = () => {
             <p className="text-gray-600 mb-8">
               Let's discuss your project and create something extraordinary together.
             </p>
-            <a href="/contact" className="btn-primary">
+            <Link to="/contact" className="btn-primary">
               Schedule a Consultation
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

@@ -34,7 +34,8 @@ const Navbar: React.FC = () => {
       <div className="container">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center">
-            <span className={`text-2xl font-display font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
+            <img src="/LOGO.jpg" alt="Logo" className="h-10 w-12 mr-2" />
+            <span className={`text-2xl font-display font-bold ${isScrolled ? 'text-primary' : 'text-primary-light'}`}>
               SN Elegancy
             </span>
           </Link>
@@ -52,8 +53,8 @@ const Navbar: React.FC = () => {
                 {link.name}
               </Link>
             ))}
-            <Link to="/contact" className="btn-primary">
-              Get Started
+            <Link to="/login" className="btn-primary">
+              Login
             </Link>
           </div>
 

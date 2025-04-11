@@ -1,8 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import axios from 'axios';
 
 const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [responseMessage, setResponseMessage] = useState('');
+
+  // Handle input change
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setResponseMessage('');
+
+    try {
+      interface ContactResponse {
+        message: string;
+      }
+
+      const response = await axios.post<ContactResponse>('https://sn-elegancy-project.onrender.com/message/create', formData);
+
+      if (response.data.message) {
+        setResponseMessage('Your message has been sent successfully!');
+      }
+    } catch (error) {
+      setResponseMessage('Error sending message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="pt-20">
       <section className="py-20 bg-primary text-white">
@@ -44,9 +86,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold">Visit Us</h3>
                     <p className="text-gray-600">
-                      123 Farming Street<br />
-                      Agricultural Valley, AV 12345<br />
-                      Kigali Rwanda
+                      8éme tranche Angres<br />
+                      Abidjan, Côte d'Ivoire<br />
                     </p>
                   </div>
                 </div>
@@ -55,7 +96,7 @@ const ContactPage: React.FC = () => {
                   <Phone className="h-6 w-6 text-primary mr-4" />
                   <div>
                     <h3 className="font-semibold">Call Us</h3>
-                    <p className="text-gray-600">+250 (7800) 000-000</p>
+                    <p className="text-gray-600">+225 0713131355</p>
                   </div>
                 </div>
 
@@ -63,7 +104,7 @@ const ContactPage: React.FC = () => {
                   <Mail className="h-6 w-6 text-primary mr-4" />
                   <div>
                     <h3 className="font-semibold">Email Us</h3>
-                    <p className="text-gray-600">contact@agriflow.org</p>
+                    <p className="text-gray-600">info@snelegancy.com</p>
                   </div>
                 </div>
 
@@ -72,7 +113,7 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold">Office Hours</h3>
                     <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 5:00 PM<br />
+                      Monday - Friday: 8:00 AM - 5:00 PM<br />
                       Saturday: 10:00 AM - 2:00 PM<br />
                       Sunday: Closed
                     </p>
@@ -86,7 +127,7 @@ const ContactPage: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <form className="bg-white p-8 rounded-lg shadow-lg">
+              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-bold mb-6 text-primary">Send Us a Message</h3>
                 <div className="space-y-6">
                   <div>
@@ -96,6 +137,8 @@ const ContactPage: React.FC = () => {
                     <input
                       type="text"
                       id="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       placeholder="John Doe"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
@@ -107,6 +150,8 @@ const ContactPage: React.FC = () => {
                     <input
                       type="email"
                       id="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       placeholder="john@example.com"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
@@ -118,6 +163,8 @@ const ContactPage: React.FC = () => {
                     <input
                       type="tel"
                       id="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       placeholder="+1 (555) 000-0000"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
@@ -129,14 +176,26 @@ const ContactPage: React.FC = () => {
                     <textarea
                       id="message"
                       rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
                       placeholder="Tell us about your project..."
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                     />
                   </div>
-                  <button type="submit" className="w-full btn-primary">
-                    Send Message
+                  <button
+                    type="submit"
+                    className={`w-full btn-primary ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
+
+                {responseMessage && (
+                  <div className="mt-6 text-center text-gray-600">
+                    <p>{responseMessage}</p>
+                  </div>
+                )}
               </form>
             </motion.div>
           </div>
@@ -148,7 +207,7 @@ const ContactPage: React.FC = () => {
         <div className="container">
           <div className="rounded-lg overflow-hidden shadow-lg h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.19036273527!2d30.03998789599108!3d-1.944165713647708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411f0818!2sKigali%2C%20Rwanda!5e0!3m2!1sen!2sus!4v1709901234567!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3972.146686395449!2d-3.9848795250160407!3d5.394607494584435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMjMnNDAuNiJOIDPCsDU4JzU2LjMiVw!5e0!3m2!1sen!2srw!4v1744305903888!5m2!1sen!2srw"
               width="100%"
               height="100%"
               style={{ border: 0 }}

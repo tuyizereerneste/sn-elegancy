@@ -47,7 +47,7 @@ const FeaturedProjectsSection: React.FC = () => {
       title: 'Luxury Villa Renovation',
       description: 'Complete transformation of a 5000 sq ft residential space',
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop',
-      video: 'https://player.vimeo.com/external/373787639.hd.mp4?s=dee27e23aac0fc7468c8101c52f3530c08355df3&profile_id=175'
+      video: '/VIDEO.mp4'
     },
     {
       title: 'Modern Office Design',
