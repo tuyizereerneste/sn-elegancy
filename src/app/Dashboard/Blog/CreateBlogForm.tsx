@@ -15,7 +15,7 @@ const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ onClose }) => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const sectors = ["Technology", "Health", "Education", "Entertainment"];
+  const sectors = ["Hospitality", "Residential", "Commercial", "Environmental"];
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
