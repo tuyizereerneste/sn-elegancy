@@ -1,0 +1,46 @@
+{
+    "about": {
+      "aboutTitle": "À propos de SN Elegancy",
+      "aboutDescription": "Nous sommes passionnés par la création d'espaces extraordinaires qui inspirent, réconfortent et élèvent la façon dont les gens vivent et travaillent.",
+      "yearsOfExperience": "Années d'expérience",
+      "happyClients": "Clients satisfaits",
+      "CompletedProjects": "Projets réalisés",
+      "DesignAwards": "Récompenses de design",
+      "ourStory": "Notre histoire",
+      "p1": "Ce qui a commencé comme une passion pour le design est devenu un nom de confiance dans la conception et la rénovation d'intérieur. Notre réputation repose sur la créativité, le savoir-faire et une compréhension profonde des visions uniques de nos clients.",
+      "p2": "Nous croyons que chaque espace a le potentiel d'inspirer, et nous sommes là pour révéler ce potentiel avec beauté et intention.",
+      "p3": "Des maisons chaleureuses aux espaces commerciaux audacieux, nous donnons vie aux rêves, une pièce à la fois, redéfinissant l'élégance, lançant des tendances et dépassant les attentes à chaque étape.",
+      "MissionTitle": "Notre mission",
+      "missionDescription": "Notre mission est de transformer les espaces en environnements inspirants, fonctionnels et esthétiques qui reflètent la personnalité et les besoins uniques de nos clients. Nous nous efforçons de dépasser les attentes grâce à un design innovant, un savoir-faire exceptionnel et un service client inégalé.",
+      "vissionTitle": "Notre vision",
+      "vissionDescription": "Notre vision est d’être le cabinet de design d’intérieur de référence, reconnu pour notre créativité, notre intégrité et l’impact positif que nous avons sur la vie des gens à travers les espaces que nous créons. Nous visons à inspirer et à lancer des tendances dans l’industrie tout en entretenant des relations durables avec nos clients.",
+      "valuesTitle": "Nos valeurs fondamentales",
+      "value1": {
+        "value1Title": "Intégrité",
+        "value1Description": "Nous maintenons les normes les plus élevées d'honnêteté et de transparence dans toutes nos actions."
+      },
+      "value2": {
+        "value2Title": "Innovation",
+        "value2Description": "Nous encourageons la créativité et accueillons de nouvelles idées pour rester à l'avant-garde des tendances du design."
+      },
+      "value3": {
+        "value3Title": "Excellence",
+        "value3Description": "Nous nous engageons à fournir une qualité exceptionnelle dans chaque projet que nous réalisons."
+      },
+      "meetOurTeamTitle": "Rencontrez notre équipe",
+      "meetOurTeamDescription": "Notre talentueuse équipe de designers, architectes et chefs de projet travaille ensemble pour donner vie à votre vision.",
+      "team1": {
+        "team1Role": "Designer principal",
+        "team1Bio": "Avec plus de 15 ans d'expérience dans le design d'intérieur de luxe, Sarah dirige notre vision créative."
+      },
+      "team2": {
+        "team2Role": "Architecte principal",
+        "team2Bio": "Michael est spécialisé dans l'architecture durable et la planification innovante des espaces."
+      },
+      "team3": {
+        "team3Role": "Chef de projet",
+        "team3Bio": "Emma veille à ce que chaque projet soit livré dans les délais et dépasse les attentes des clients."
+      }
+    }
+  }
+  

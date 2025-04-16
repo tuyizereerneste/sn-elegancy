@@ -1,0 +1,89 @@
+{
+    "services": {
+        "title": "Our Services",
+        "description": "Comprehensive design and renovation solutions to transform your space into something extraordinary.",
+        "servicesList": {
+            "SnFurnitures": {
+                "SnFurniturestitle": "SN Furnitures and Interior Design",
+                "SnFurnituresdescription": "Transform your space with our custom furniture and interior design services.",
+                "SnFurnituresList1": "Custom furniture design",
+                "SnFurnituresList2": "Space planning",
+                "SnFurnituresList3": "Color and material selection",
+                "SnFurnituresList4": "Lighting design"
+            },
+            "SnPlumbing": {
+                "SnPlumbingtitle": "SN Plumbing & Sanitation",
+                "SnPlumbingdescription": "Expert plumbing solutions for residential and commercial properties.",
+                "SnPlumbingList1": "Pipe installation and repair",
+                "SnPlumbingList2": "Drain cleaning and maintenance",
+                "SnPlumbingList3": "Water heater services",
+                "SnPlumbingList4": "Emergency plumbing"
+            },
+            "SnElectricity": {
+                "SnElectricitytitle": "SN Electricity",
+                "SnElectricitydescription": "Safe and reliable electrical services for all your needs.",
+                "SnElectricityList1": "Wiring and rewiring",
+                "SnElectricityList2": "Lighting installation",
+                "SnElectricityList3": "Electrical repairs",
+                "SnElectricityList4": "Safety inspections"
+            },
+            "SnMasonry": {
+                "SnMasonrytitle": "SN Masonry",
+                "SnMasonrydescription": "High-quality masonry work for durable and beautiful structures.",
+                "SnMasonryList1": "Brick and stone work",
+                "SnMasonryList2": "Concrete pouring and finishing",
+                "SnMasonryList3": "Retaining walls and patios",
+                "SnMasonryList4": "Masonry repairs and restoration"
+            },
+            "SnPainting": {
+                "SnPaintingtitle": "SN Painting",
+                "SnPaintingdescription": "Professional painting services to enhance the beauty of your space.",
+                "SnPaintingList1": "Interior and exterior painting",
+                "SnPaintingList2": "Color consultation",
+                "SnPaintingList3": "Surface preparation",
+                "SnPaintingList4": "Eco-friendly paint options"
+            },
+            "SnLandscape": {
+                "SnLandsctitle": "SN Landscape",
+                "SnLandscapedescription": "Create stunning outdoor spaces with our landscaping services.",
+                "SnLandscapeList1": "Garden design",
+                "SnLandscapeList2": "Planting and maintenance",
+                "SnLandscapeList3": "Hardscaping",
+                "SnLandscapeList4": "Maintenance and care"
+            },
+            "SnCeiling": {
+                "SnCeilingtitle": "SN Ceiling and Roofing",
+                "SnCeilingdescription": "Expert ceiling and roofing solutions for your home or business.",
+                "SnCeilingList1": "Roof installation and repair",
+                "SnCeilingList2": "Ceiling installation",
+                "SnCeilingList3": "Insulation services",
+                "SnCeilingList4": "Gutter systems"
+            },
+            "SnTiling": {
+                "SnTilingtitle": "SN Tiling",
+                "SnTilingdescription": "Professional tiling services for floors, walls, and more.",
+                "SnTilingList1": "Floor tiling",
+                "SnTilingList2": "Wall tiling",
+                "SnTilingList3": "Custom tile designs",
+                "SnTilingList4": "Grout and sealant application"
+            },
+            "SnArchitecture": {
+                "SnArchitecturetitle": "SN Architecture",
+                "SnArchitecturedescription": "Innovative architectural designs tailored to your needs.",
+                "SnArchitectureList1": "Building design",
+                "SnArchitectureList2": "Site planning",
+                "SnArchitectureList3": "Permit assistance",
+                "SnArchitectureList4": "Sustainable design"
+            },
+            "SnProject": {
+                "SnProjecttitle": "SN Project Management",
+                "SnProjectdescription": "Efficient project management to ensure your project is completed on time and within budget.",
+                "SnProjectList1": "Timeline development",
+                "SnProjectList2": "Contractor coordination",
+                "SnProjectList3": "Budget management",
+                "SnProjectList4": "Risk management",
+                "SnProjectList5": "Quality control"
+            }
+        }
+    }
+}

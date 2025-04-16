@@ -1,0 +1,9 @@
+{
+    "login": {
+      "title": "Bienvenue chez SN-Elegancy",
+      "description": "Connectez-vous à votre compte pour continuer",
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "button": "Se connecter"
+    }
+  }  

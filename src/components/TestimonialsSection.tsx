@@ -1,85 +1,82 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
+import { Star, Quote } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-interface Testimonial {
-  name: string;
-  role: string;
-  image: string;
-  quote: string;
-  rating: number;
-}
 
-const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = ({ testimonial, index }) => (
-  <motion.div
-    key={index}
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: index * 0.2 }}
-    className="bg-white rounded-lg shadow-lg p-8"
-  >
-    <div className="flex items-center mb-6">
-      <img
-        src={testimonial.image}
-        alt={testimonial.name}
-        className="w-16 h-16 rounded-full object-cover mr-4"
-      />
-      <div>
-        <h3 className="font-bold text-lg">{testimonial.name}</h3>
-        <p className="text-gray-600">{testimonial.role}</p>
-      </div>
-    </div>
-    <div className="flex mb-4">
-      {[...Array(testimonial.rating)].map((_, i) => (
-        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-      ))}
-    </div>
-    <p className="text-gray-700 italic">{testimonial.quote}</p>
-  </motion.div>
-);
-
-const TestimonialsSection: React.FC = () => {
+const TestimonialsHome: React.FC = () => {
+  const { t } = useTranslation('testimonials');
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Homeowner',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop',
-      quote: 'SN Elegancy transformed our home beyond our expectations. Their attention to detail and creativity is unmatched.',
-      rating: 5
+      id: 1,
+      name: "Emily Thompson",
+      role: t('testimonials.testimony1.ownerTitle'),
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500&auto=format&fit=crop",
+      content: t('testimonials.testimony1.ownerMessage'),
+      rating: 5,
     },
     {
-      name: 'Michael Chen',
-      role: 'Business Owner',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop',
-      quote: 'Professional, innovative, and reliable. They delivered our office renovation project on time and within budget.',
-      rating: 5
+      id: 2,
+      name: "David Chen",
+      role: t('testimonials.testimony2.ownerTitle'),
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop",
+      content: t('testimonials.testimony2.ownerMessage'),
+      rating: 4,
     },
     {
-      name: 'Emma Rodriguez',
-      role: 'Interior Designer',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop',
-      quote: "Working with SN Elegancy was a pleasure. Their team's expertise and creativity are truly remarkable.",
-      rating: 5
+      id: 3,
+      name: "Sarah Martinez",
+      role: t('testimonials.testimony2.ownerTitle'),
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=500&auto=format&fit=crop",
+      content: t('testimonials.testimony3.ownerMessage'),
+      rating: 5,
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Hear from our satisfied clients about their experience working with us
+    <div className="pt-20">
+      <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">{t('testimonials.WhatOurClients')}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">{t('testimonials.clientsDescription')}
           </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} index={index} />
-          ))}
-        </div>
       </div>
-    </section>
+
+      <section className="py-20">
+        <div className="container">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="bg-white rounded-lg shadow-lg p-8"
+              >
+                <div className="flex items-center mb-6">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-16 h-16 rounded-full object-cover mr-4"
+                  />
+                  <div>
+                    <h3 className="font-bold text-lg">{testimonial.name}</h3>
+                    <p className="text-gray-600">{testimonial.role}</p>
+                  </div>
+                </div>
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <Quote className="h-8 w-8 text-primary mb-4" />
+                <p className="text-gray-700 mb-4">{testimonial.content}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default TestimonialsSection;
+export default TestimonialsHome;

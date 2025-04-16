@@ -1,36 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
+import FinalCTASection from '../components/CallToActionSection';
+import { useTranslation } from 'react-i18next';
 
 
 const TestimonialsPage: React.FC = () => {
+  const { t } = useTranslation('testimonials');
   const testimonials = [
     {
       id: 1,
       name: "Emily Thompson",
-      role: "Homeowner",
+      role: t('testimonials.testimony1.ownerTitle'),
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500&auto=format&fit=crop",
-      content: "Working with SN Elegancy was an absolute dream. They transformed our dated living space into a modern, functional haven that perfectly reflects our style. Their attention to detail and professional approach made the entire process seamless.",
+      content: t('testimonials.testimony1.ownerMessage'),
       rating: 5,
-      project: "Modern Apartment Renovation"
+      project: t('testimonials.testimony1.ownerWork'),
     },
     {
       id: 2,
       name: "David Chen",
-      role: "Restaurant Owner",
+      role: t('testimonials.testimony2.ownerTitle'),
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop",
-      content: "The team at SN Elegancy brought our vision for a contemporary dining space to life. Their innovative design solutions and understanding of commercial requirements resulted in a restaurant that our customers love.",
+      content: t('testimonials.testimony2.ownerMessage'),
       rating: 5,
-      project: "Fine Dining Restaurant Design"
+      project: t('testimonials.testimony2.ownerWork'),
     },
     {
       id: 3,
       name: "Sarah Martinez",
-      role: "CEO, Tech Startup",
+      role: t('testimonials.testimony2.ownerTitle'),
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=500&auto=format&fit=crop",
-      content: "Our office renovation by SN Elegancy has completely transformed our workplace. The thoughtful design has improved team collaboration and created an inspiring environment that our employees love coming to every day.",
+      content: t('testimonials.testimony3.ownerMessage'),
       rating: 5,
-      project: "Office Space Renovation"
+      project: t('testimonials.testimony3.ownerWork'),
     }
   ];
 
@@ -43,10 +46,8 @@ const TestimonialsPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl font-bold mb-6">Client Testimonials</h1>
-            <p className="text-xl text-gray-200">
-              Hear what our clients have to say about their experience with SN Elegancy.
-            </p>
+            <h1 className="text-5xl font-bold mb-6">{t('testimonials.title')}</h1>
+            <p className="text-xl text-gray-200">{t('testimonials.description')}</p>
           </motion.div>
         </div>
       </section>
@@ -90,23 +91,7 @@ const TestimonialsPage: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gray-50">
-        <div className="container text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
-            <p className="text-gray-600 mb-8">
-              Join our satisfied clients and transform your space with SN Elegancy.
-            </p>
-            <a href="/contact" className="btn-primary">
-              Get in Touch
-            </a>
-          </motion.div>
-        </div>
-      </section>
+      <FinalCTASection />
     </div>
   );
 };

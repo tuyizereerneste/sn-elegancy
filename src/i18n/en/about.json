@@ -1,0 +1,45 @@
+{
+    "about": {
+        "aboutTitle": "About SN Elegancy",
+        "aboutDescription": "We are passionate about creating extraordinary spaces that inspire, comfort, and elevate the way people live and work.",
+        "yearsOfExperience": "Years of Experience",
+        "happyClients": "Happy Clients",
+        "CompletedProjects": "Completed Projects",
+        "DesignAwards": "Design Awards",
+        "ourStory": "Our Story",
+        "p1": "What began as a passion for design has evolved into a trusted name in interior design and renovation. Our reputation is built on a foundation of creativity, craftsmanship, and a deep understanding of our clients' unique visions.",
+        "p2": "We believe every space holds the potential to inspire, and we're here to unlock that potential beautifully and intentionally.",
+        "p3": "From cozy homes to bold commercial spaces, we bring dreams to life, one room at a time redefining elegance, setting trends, and exceeding expectations every step of the way.",
+        "MissionTitle": "Our Mission",
+        "missionDescription": "Our mission is to transform spaces into inspiring, functional, and beautiful environments that reflect our clients' unique personalities and needs. We strive to exceed expectations through innovative design, exceptional craftsmanship, and unparalleled customer service.",
+        "vissionTitle": "Our Vision",
+        "vissionDescription": "Our vision is to be the leading interior design firm, recognized for our creativity, integrity, and the positive impact we have on people's lives through the spaces we create. We aim to inspire and set trends in the industry while fostering long-lasting relationships with our clients.",
+        "valuesTitle": "Our Core Values",
+        "value1": {
+            "value1Title": "Integrity",
+            "value1Description": "We uphold the highest standards of honesty and transparency in all our actions."
+        },
+        "value2": {
+            "value2Title": "Innovation",
+            "value2Description": "We foster creativity and embrace new ideas to stay at the forefront of design trends."
+        },
+        "value3": {
+            "value3Title": "Excellence",
+            "value3Description": "We are committed to delivering exceptional quality in every project we undertake."
+        },
+        "meetOurTeamTitle": "Meet Our Team",
+        "meetOurTeamDescription": "Our talented team of designers, architects, and project managers work together to bring your vision to life.",
+        "team1": {
+            "team1Role": "Principal Designer",
+            "team1Bio": "With over 15 years of experience in luxury interior design, Sarah leads our creative vision."
+        },
+        "team2": {
+            "team2Role": "Senior Architect",
+            "team2Bio": "Michael specializes in sustainable architecture and innovative space planning."
+        },
+        "team3": {
+            "team3Role": "Project Manager",
+            "team3Bio": "Emma ensures every project is delivered on time and exceeds client expectations."
+        }
+    }
+}

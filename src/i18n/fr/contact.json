@@ -1,0 +1,27 @@
+{
+    "contact": {
+      "title": "Contactez-nous",
+      "description": "Contactez-nous pour discuter de votre prochain projet. Nous sommes là pour donner vie à votre vision.",
+      "getInTouch": {
+        "title": "Entrer en contact",
+        "description": "Que vous commenciez un nouveau projet ou que vous souhaitiez rénover un espace existant, nous sommes là pour transformer votre vision en réalité. Contactez-nous pour une consultation et créons ensemble quelque chose d’extraordinaire.",
+        "visitUs": "Visitez-nous",
+        "callUs": "Appelez-nous",
+        "emailUs": "Envoyez-nous un e-mail",
+        "officeHours": "Heures de bureau",
+        "monday": "Lundi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche",
+        "closed": "Fermée"
+      },
+      "sendMessage": {
+        "title": "Envoyez-nous un message",
+        "fullName": "Nom complet",
+        "emailAddress": "Adresse e-mail",
+        "phone": "Numéro de téléphone",
+        "message": "Votre message",
+        "sendButton": "Envoyer le message"
+      }
+    }
+  }  

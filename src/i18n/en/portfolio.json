@@ -1,0 +1,10 @@
+{
+    "portfolio": {
+        "title": "Our Portfolio",
+        "description": "Explore our collection of thoughtfully designed spaces that showcase our commitment to excellence and innovation.",
+        "all": "All Projects",
+        "residential": "Residential",
+        "commercial": "Commercial",
+        "hospitality": "Hospitality"
+    }
+}

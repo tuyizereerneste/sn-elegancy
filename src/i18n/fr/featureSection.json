@@ -1,0 +1,19 @@
+{
+    "featureSection": {
+      "title": "Projets à la Une",
+      "description": "Découvrez nos dernières transformations et designs innovants",
+      "project1": {
+        "title": "Rénovation d'une Villa de Luxe",
+        "description": "Transformation complète d'un espace résidentiel de 5000 pieds carrés"
+      },
+      "project2": {
+        "title": "Design de Bureau Moderne",
+        "description": "Espace de travail contemporain pour une startup technologique et des entreprises"
+      },
+      "project3": {
+        "title": "Hall d'Hôtel Boutique",
+        "description": "Design élégant et accueillant de l'entrée"
+      }
+    }
+  }
+  

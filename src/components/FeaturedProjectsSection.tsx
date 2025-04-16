@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 interface Project {
   title: string;
@@ -8,7 +10,8 @@ interface Project {
   video: string;
 }
 
-const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => (
+const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => { 
+  return (
   <motion.div
     key={index}
     initial={{ opacity: 0, y: 20 }}
@@ -39,46 +42,49 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       </div>
     </div>
   </motion.div>
-);
+)};
 
 const FeaturedProjectsSection: React.FC = () => {
+  const {t} = useTranslation('featureSection');
   const featuredProjects = [
     {
-      title: 'Luxury Villa Renovation',
-      description: 'Complete transformation of a 5000 sq ft residential space',
+      title: t('featureSection.project1.title'),
+      description: t('featureSection.project1.description'),
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop',
       video: '/VIDEO.mp4'
     },
     {
-      title: 'Modern Office Design',
-      description: 'Contemporary workspace for a tech startup',
+      title: t('featureSection.project2.title'),
+      description: t('featureSection.project2.description'),
       image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop',
       video: 'https://player.vimeo.com/external/373787639.hd.mp4?s=dee27e23aac0fc7468c8101c52f3530c08355df3&profile_id=175'
     },
     {
-      title: 'Boutique Hotel Lobby',
-      description: 'Elegant and welcoming entrance design',
+      title: t('featureSection.project3.title'),
+      description: t('featureSection.project3.description'),
       image: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=1000&auto=format&fit=crop',
       video: 'https://player.vimeo.com/external/373787639.hd.mp4?s=dee27e23aac0fc7468c8101c52f3530c08355df3&profile_id=175'
     }
   ];
 
   return (
-    <section className="py-20">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-primary">Featured Projects</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Explore our latest transformations and innovative designs
-          </p>
+    <Link to="/portfolio">
+      <section className="py-20 cursor-pointer">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-primary">{t('featureSection.title')}</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              {t('featureSection.description')}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredProjects.map((project, index) => (
+              <ProjectCard key={index} project={project} index={index} />
+            ))}
+          </div>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {featuredProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </Link>
   );
 };
 

@@ -1,0 +1,20 @@
+{
+    "serviceSection": {
+        "title": "Our Services",
+        "description": "We offer comprehensive design and renovation solutions tailored to your needs.",
+        "service1": {
+            "title": "Interior Design",
+            "description": "Create stunning spaces that reflect your style and personality."
+            
+        },
+        "service2": {
+            "title": "Renovation",
+            "description": "Transform your existing space with our expert renovation services."
+        },
+        "service3": {
+            "title": "Custom Furniture",
+            "description": "Unique pieces designed and crafted specifically for your space."
+        },
+        "learnButton": "Learn More"
+    }
+}

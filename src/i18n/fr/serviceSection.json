@@ -1,0 +1,20 @@
+{
+    "serviceSection": {
+      "title": "Nos Services",
+      "description": "Nous offrons des solutions complètes de design et de rénovation adaptées à vos besoins.",
+      "service1": {
+        "title": "Design d'intérieur",
+        "description": "Créez des espaces magnifiques qui reflètent votre style et votre personnalité."
+      },
+      "service2": {
+        "title": "Rénovation",
+        "description": "Transformez votre espace existant grâce à nos services de rénovation experts."
+      },
+      "service3": {
+        "title": "Mobilier sur mesure",
+        "description": "Des pièces uniques conçues et fabriquées spécialement pour votre espace."
+      },
+      "learnButton": "En savoir plus"
+    }
+  }
+  

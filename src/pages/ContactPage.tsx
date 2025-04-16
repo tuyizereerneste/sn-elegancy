@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const ContactPage: React.FC = () => {
+  const { t } = useTranslation('contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -54,10 +56,8 @@ const ContactPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-200">
-              Get in touch with us to discuss your next project. We're here to help bring your vision to life.
-            </p>
+            <h1 className="text-5xl font-bold mb-6">{t('contact.title')}</h1>
+            <p className="text-xl text-gray-200">{t('contact.description')}</p>
           </motion.div>
         </div>
       </section>
@@ -72,19 +72,15 @@ const ContactPage: React.FC = () => {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold mb-6 text-primary">Get in Touch</h2>
-                <p className="text-gray-600 mb-8">
-                  Whether you're starting a new project or looking to renovate an existing space,
-                  we're here to help turn your vision into reality. Reach out to us for a consultation,
-                  and let's create something extraordinary together.
-                </p>
+                <h2 className="text-3xl font-bold mb-6 text-primary">{t('contact.getInTouch.title')}</h2>
+                <p className="text-gray-600 mb-8">{t('contact.getInTouch.description')}</p>
               </div>
 
               <div className="space-y-6">
                 <div className="flex items-center p-4 bg-gray-50 rounded-lg">
                   <MapPin className="h-6 w-6 text-primary mr-4" />
                   <div>
-                    <h3 className="font-semibold">Visit Us</h3>
+                    <h3 className="font-semibold">{t('contact.getInTouch.visitUs')}</h3>
                     <p className="text-gray-600">
                       8éme tranche Angres<br />
                       Abidjan, Côte d'Ivoire<br />
@@ -95,7 +91,7 @@ const ContactPage: React.FC = () => {
                 <div className="flex items-center p-4 bg-gray-50 rounded-lg">
                   <Phone className="h-6 w-6 text-primary mr-4" />
                   <div>
-                    <h3 className="font-semibold">Call Us</h3>
+                    <h3 className="font-semibold">{t('contact.getInTouch.callUs')}</h3>
                     <p className="text-gray-600">+225 0713131355</p>
                   </div>
                 </div>
@@ -103,7 +99,7 @@ const ContactPage: React.FC = () => {
                 <div className="flex items-center p-4 bg-gray-50 rounded-lg">
                   <Mail className="h-6 w-6 text-primary mr-4" />
                   <div>
-                    <h3 className="font-semibold">Email Us</h3>
+                    <h3 className="font-semibold">{t('contact.getInTouch.emailUs')}</h3>
                     <p className="text-gray-600">info@snelegancy.com</p>
                   </div>
                 </div>
@@ -111,11 +107,10 @@ const ContactPage: React.FC = () => {
                 <div className="flex items-center p-4 bg-gray-50 rounded-lg">
                   <Clock className="h-6 w-6 text-primary mr-4" />
                   <div>
-                    <h3 className="font-semibold">Office Hours</h3>
-                    <p className="text-gray-600">
-                      Monday - Friday: 8:00 AM - 5:00 PM<br />
-                      Saturday: 10:00 AM - 2:00 PM<br />
-                      Sunday: Closed
+                    <h3 className="font-semibold">{t('contact.getInTouch.officeHours')}</h3>
+                    <p className="text-gray-600">{t('contact.getInTouch.monday')} - {t('contact.getInTouch.friday')}: 8:00 AM - 5:00 PM<br />
+                      {t('contact.getInTouch.saturday')}: 10:00 AM - 2:00 PM<br />
+                      {t('contact.getInTouch.sunday')}: {t('contact.getInTouch.closed')}
                     </p>
                   </div>
                 </div>
@@ -128,11 +123,10 @@ const ContactPage: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold mb-6 text-primary">Send Us a Message</h3>
+                <h3 className="text-2xl font-bold mb-6 text-primary">{t('contact.sendMessage.title')}</h3>
                 <div className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">{t('contact.sendMessage.fullName')}
                     </label>
                     <input
                       type="text"
@@ -144,8 +138,7 @@ const ContactPage: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">{t('contact.sendMessage.emailAddress')}
                     </label>
                     <input
                       type="email"
@@ -157,8 +150,7 @@ const ContactPage: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">{t('contact.sendMessage.phone')}
                     </label>
                     <input
                       type="tel"
@@ -170,8 +162,7 @@ const ContactPage: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Your Message
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">{t('contact.sendMessage.message')}
                     </label>
                     <textarea
                       id="message"
@@ -187,7 +178,7 @@ const ContactPage: React.FC = () => {
                     className={`w-full btn-primary ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? 'Sending...' : t('contact.sendMessage.sendButton')}
                   </button>
                 </div>
 

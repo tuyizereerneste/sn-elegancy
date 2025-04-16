@@ -1,33 +1,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Users, Clock, Target } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const AboutPage: React.FC = () => {
+  const { t } = useTranslation('about');
   const stats = [
-    { icon: Award, label: 'Years of Experience', value: '5+' },
-    { icon: Users, label: 'Happy Clients', value: '500+' },
-    { icon: Clock, label: 'Projects Completed', value: '10+' },
-    { icon: Target, label: 'Design Awards', value: '2+' },
+    { icon: Award, label: t('about.yearsOfExperience'), value: '5+' },
+    { icon: Users, label: t('about.happyClients'), value: '500+' },
+    { icon: Clock, label: t('about.CompletedProjects'), value: '10+' },
+    { icon: Target, label: t('about.DesignAwards'), value: '2+' },
   ];
 
   const team = [
     {
       name: 'Sarah Norton',
-      role: 'Principal Designer',
+      role: t('about.team1.team1Role'),
       image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=500&auto=format&fit=crop',
-      bio: 'With over 15 years of experience in luxury interior design, Sarah leads our creative vision.',
+      bio: t('about.team1.team1Bio'),
     },
     {
       name: 'Michael Chen',
-      role: 'Senior Architect',
+      role: t('about.team2.team2Role'),
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=500&auto=format&fit=crop',
-      bio: 'Michael specializes in sustainable architecture and innovative space planning.',
+      bio: t('about.team2.team2Bio'),
     },
     {
       name: 'Emma Rodriguez',
-      role: 'Project Manager',
+      role: t('about.team3.team3Role'),
       image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=500&auto=format&fit=crop',
-      bio: 'Emma ensures every project is delivered on time and exceeds client expectations.',
+      bio: t('about.team2.team2Bio'),
     },
   ];
 
@@ -42,11 +44,8 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl font-bold mb-6">About SN Elegancy</h1>
-            <p className="text-xl text-gray-200">
-              We are passionate about creating extraordinary spaces that inspire,
-              comfort, and elevate the way people live and work.
-            </p>
+            <h1 className="text-5xl font-bold mb-6">{t('about.aboutTitle')}</h1>
+            <p className="text-xl text-gray-200">{t('about.aboutDescription')}</p>
           </motion.div>
         </div>
       </section>
@@ -81,21 +80,11 @@ const AboutPage: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold mb-6 text-primary">Our Story</h2>
+              <h2 className="text-4xl font-bold mb-6 text-primary">{t('about.ourStory')}</h2>
               <div className="space-y-4 text-gray-600">
-                <p>
-                What began as a passion for design has evolved into a trusted name in interior design and 
-                renovation. Our reputation is built on a foundation of creativity, craftsmanship, and a 
-                deep understanding of our clients' unique visions.
-                </p>
-                <p>
-                We believe every space holds the potential to inspire, and we're here to unlock that 
-                potential—beautifully and intentionally.
-                </p>
-                <p>
-                From cozy homes to bold commercial spaces, we bring dreams to life, one room at a time—redefining 
-                elegance, setting trends, and exceeding expectations every step of the way.
-                </p>
+                <p>{t('about.p1')}</p>
+                <p>{t('about.p2')}</p>
+                <p>{t('about.p3')}</p>
               </div>
             </motion.div>
             <motion.div
@@ -122,12 +111,8 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4 text-primary">Our Mission</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our mission is to transform spaces into inspiring, functional, and beautiful environments
-              that reflect our clients' unique personalities and needs. We strive to exceed expectations
-              through innovative design, exceptional craftsmanship, and unparalleled customer service.
-            </p>
+            <h2 className="text-4xl font-bold mb-4 text-primary">{t('about.MissionTitle')}</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">{t('about.missionDescription')}</p>
           </motion.div>
         </div>
       </section>
@@ -141,12 +126,8 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4 text-primary">Our Vision</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our vision is to be the leading interior design firm, recognized for our creativity,
-              integrity, and the positive impact we have on people's lives through the spaces we create.
-              We aim to inspire and set trends in the industry while fostering long-lasting relationships
-              with our clients.
+            <h2 className="text-4xl font-bold mb-4 text-primary">{t('about.vissionTitle')}</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">{t('about.vissionDescription')}
             </p>
           </motion.div>
         </div>
@@ -161,19 +142,19 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4 text-primary">Our Core Values</h2>
+            <h2 className="text-4xl font-bold mb-4 text-primary">{t('about.valuesTitle')}</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-gray-600">
-                <h3 className="text-2xl font-bold mb-2">Integrity</h3>
-                <p>We uphold the highest standards of honesty and transparency in all our actions.</p>
+                <h3 className="text-2xl font-bold mb-2">{t('about.value1.value1Title')}</h3>
+                <p>{t('about.value1.value1Description')}</p>
               </div>
               <div className="text-gray-600">
-                <h3 className="text-2xl font-bold mb-2">Innovation</h3>
-                <p>We foster creativity and embrace new ideas to stay at the forefront of design trends.</p>
+                <h3 className="text-2xl font-bold mb-2">{t('about.value2.value2Title')}</h3>
+                <p>{t('about.value2.value2Description')}</p>
               </div>
               <div className="text-gray-600">
-                <h3 className="text-2xl font-bold mb-2">Excellence</h3>
-                <p>We are committed to delivering exceptional quality in every project we undertake.</p>
+                <h3 className="text-2xl font-bold mb-2">{t('about.value3.value3Title')}</h3>
+                <p>{t('about.value3.value2Description')}</p>
               </div>
             </div>
           </motion.div>
@@ -189,11 +170,8 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4 text-primary">Meet Our Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our talented team of designers, architects, and project managers work
-              together to bring your vision to life.
-            </p>
+            <h2 className="text-4xl font-bold mb-4 text-primary">{t('about.meetOurTeamTitle')}</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">{t('about.meetOurTeamDescription')}</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
