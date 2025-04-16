@@ -1,0 +1,18 @@
+{
+    "featureSection": {
+        "title": "Featured Projects",
+        "description": "Explore our latest transformations and innovative designs",
+        "project1": {
+            "title": "Luxury Villa Renovation",
+            "description": "Complete transformation of a 5000 sq ft residential space"
+        },
+        "project2": {
+            "title": "Modern Office Design",
+            "description": "Contemporary workspace for a tech startup and Corporates"
+        },
+        "project3": {
+            "title": "Boutique Hotel Lobby",
+            "description": "Elegant and welcoming entrance design"
+        }
+    }
+}

@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import LanguageSelector from './LanguageSelector';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,83 +19,90 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isHome = pathname === '/';
+  const showTransparent = isHome && !isScrolled;
+
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+    { name: t('navbar.home'), href: '/' },
+    { name: t('navbar.about'), href: '/about' },
+    { name: t('navbar.services'), href: '/services' },
+    { name: t('navbar.portfolio'), href: '/portfolio' },
+    { name: t('navbar.testimonials'), href: '/testimonials' },
+    { name: t('navbar.blog'), href: '/blog' },
+    { name: t('navbar.contact'), href: '/contact' },
   ];
 
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        showTransparent ? 'bg-transparent' : 'bg-primary shadow-md'
       }`}
     >
-      <div className="container">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center">
             <img src="/LOGO.jpg" alt="Logo" className="h-10 w-12 mr-2" />
-            <span className={`text-2xl font-display font-bold ${isScrolled ? 'text-primary' : 'text-primary-light'}`}>
+            <span className="text-2xl font-display font-bold text-white">
               SN Elegancy
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
-                className={`text-lg font-semibold ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                } hover:text-primary-light transition-colors`}
+                className="text-lg font-medium text-white hover:text-primary-light transition"
               >
                 {link.name}
               </Link>
             ))}
-            <Link to="/login" className="btn-primary">
-              Login
-            </Link>
+
+            {/* Language Switcher*/}
+            <LanguageSelector />
+
+            <Link to="/login" className="btn-primary px-4 py-2 text-sm">{t('navbar.login')}</Link>
           </div>
 
-          {/* Mobile Navigation Button */}
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className="h-6 w-6 text-gray-700" />
+              <X className="h-6 w-6 text-white" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-700" />
+              <Menu className="h-6 w-6 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
+          <div className="md:hidden mt-2 rounded bg-white shadow-md">
+            <div className="px-4 py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+                  className="block text-gray-700 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
+
+              {/* Language Switcher for Mobile */}
+              <LanguageSelector />
+
               <Link
-                to="/contact"
-                className="block px-3 py-2 text-center btn-primary"
+                to="/login"
+                className="block w-full text-center mt-3 btn-primary py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started
+                Login
               </Link>
             </div>
           </div>

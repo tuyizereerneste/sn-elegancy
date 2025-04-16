@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Eye, EyeOff } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface LoginResponse {
     token: string;
@@ -9,11 +10,12 @@ interface LoginResponse {
 
 const Login: React.FC = () => {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const {t} = useTranslation('login');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -81,11 +83,9 @@ const Login: React.FC = () => {
             <img src="/LOGO.jpg" alt="Logo" className="h-12 w-12" />
           </div>
         </div>
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Welcome to SN-Elegancy
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">{t('login.title')}
         </h2>
-        <p className="mt-2 text-center text-sm text-gray-600">
-          Sign in to your account to continue
+        <p className="mt-2 text-center text-sm text-gray-600">{t('login.description')}
         </p>
       </div>
 
@@ -94,8 +94,7 @@ const Login: React.FC = () => {
           {/* <LoginForm /> */}
             <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Email address
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">{t('login.email')}
                 </label>
                 <div className="mt-1">
                     <input
@@ -114,8 +113,7 @@ const Login: React.FC = () => {
                 </div>
     
                 <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                    Password
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700">{t('login.password')}
                 </label>
                 <div className="mt-1 relative">
                     <input
@@ -154,7 +152,7 @@ const Login: React.FC = () => {
                     isLoading ? 'opacity-50 cursor-not-allowed' : ''
                     }`}
                 >
-                    {isLoading ? 'Loading...' : 'Sign In'}
+                    {isLoading ? 'Loading...' : t('login.button')}
                 </button>
                 </div>
             </form>

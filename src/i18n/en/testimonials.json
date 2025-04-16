@@ -1,0 +1,23 @@
+{
+    "testimonials": {
+        "title": "Client Testimonials",
+        "description": "Hear what our clients have to say about their experience with SN Elegancy.",
+        "testimony1": {
+            "ownerTitle": "Home Owner",
+            "ownerMessage": "Working with SN Elegancy was an absolute dream. They transformed our dated living space into a modern, functional haven that perfectly reflects our style. Their attention to detail and professional approach made the entire process seamless.",
+            "ownerWork": "Project: Modern Apartment Renovation"
+        },
+        "testimony2": {
+            "ownerTitle": "Restaurant Owner",
+            "ownerMessage": "The team at SN Elegancy brought our vision for a contemporary dining space to life. Their innovative design solutions and understanding of commercial requirements resulted in a restaurant that our customers love.",
+            "ownerWork": "Project: Fine Dining Restaurant Design"
+        },
+        "testimony3": {
+            "ownerTitle": "CEO, Tech Startup",
+            "ownerMessage": "Our office renovation by SN Elegancy has completely transformed our workplace. The thoughtful design has improved team collaboration and created an inspiring environment that our employees love coming to every day.",
+            "ownerWork": "Project: Office Space Renovation"
+        },
+        "WhatOurClients": "What Our Clients Say",
+        "clientsDescription": "Hear from our satisfied clients about their experience working with us"
+    }
+}

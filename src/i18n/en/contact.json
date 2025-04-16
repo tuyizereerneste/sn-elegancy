@@ -1,0 +1,27 @@
+{
+    "contact": {
+        "title": "Contact Us",
+        "description": "Get in touch with us to discuss your next project. We're here to help bring your vision to life.",
+        "getInTouch": {
+            "title": "Get in Touch",
+            "description": "Whether you're starting a new project or looking to renovate an existing space, we're here to help turn your vision into reality. Reach out to us for a consultation, and let's create something extraordinary together.",
+            "visitUs": "Visit Us",
+            "callUs": "Call Us",
+            "emailUs": "Email Us",
+            "officeHours": "Office Hours",
+            "monday": "Monday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday",
+            "closed": "Closed"
+        },
+        "sendMessage": {
+            "title": "Send Us a Message",
+            "fullName": "Full Name",
+            "emailAddress": "Email Address",
+            "phone": "Phone Number",
+            "message": "Your Message",
+            "sendButton": "Send Message"
+        }
+    }
+}

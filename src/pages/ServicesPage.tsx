@@ -1,74 +1,134 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Paintbrush, Home, Ruler, Sofa, Clock, Settings } from 'lucide-react';
+import FinalCTASection from '../components/CallToActionSection'
+import {
+  Paintbrush,
+  Home,
+  Ruler,
+  Sofa,
+  Clock,
+  Wrench,
+  Lightbulb,
+  Brush,
+  Leaf,
+  Layers,
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const ServicesPage: React.FC = () => {
+  const { t } = useTranslation('services');
+
   const services = [
     {
-      icon: Paintbrush,
-      title: 'Interior Design',
-      description: 'Full-service interior design solutions tailored to your style and needs.',
+      icon: Sofa,
+      title: t('services.servicesList.SnFurnitures.SnFurniturestitle'),
+      description: t('services.servicesList.SnFurnitures.SnFurnituresdescription'),
       features: [
-        'Space planning and layout optimization',
-        'Color and material selection',
-        'Custom furniture design',
-        'Lighting design',
+        t('services.servicesList.SnFurnitures.SnFurnituresList1'),
+        t('services.servicesList.SnFurnitures.SnFurnituresList2'),
+        t('services.servicesList.SnFurnitures.SnFurnituresList3'),
+        t('services.servicesList.SnFurnitures.SnFurnituresList4'),
+      ],
+    },
+    {
+      icon: Wrench,
+      title: t('services.servicesList.SnPlumbing.SnPlumbingtitle'),
+      description: t('services.servicesList.SnPlumbing.SnPlumbingdescription'),
+      features: [
+        t('services.servicesList.SnPlumbing.SnPlumbingList1'),
+        t('services.servicesList.SnPlumbing.SnPlumbingList2'),
+        t('services.servicesList.SnPlumbing.SnPlumbingList3'),
+        t('services.servicesList.SnPlumbing.SnPlumbingList4'),
+      ],
+    },
+    {
+      icon: Lightbulb,
+      title: t('services.servicesList.SnElectricity.SnElectricitytitle'),
+      description: t('services.servicesList.SnElectricity.SnElectricitydescription'),
+      features: [
+        t('services.servicesList.SnElectricity.SnElectricityList1'),
+        t('services.servicesList.SnElectricity.SnElectricityList2'),
+        t('services.servicesList.SnElectricity.SnElectricityList3'),
+        t('services.servicesList.SnElectricity.SnElectricityList4'),
+      ],
+    },
+    {
+      icon: Layers,
+      title: t('services.servicesList.SnMasonry.SnMasonrytitle'),
+      description: t('services.servicesList.SnMasonry.SnMasonrydescription'),
+      features: [
+        t('services.servicesList.SnMasonry.SnMasonryList1'),
+        t('services.servicesList.SnMasonry.SnMasonryList2'),
+        t('services.servicesList.SnMasonry.SnMasonryList3'),
+        t('services.servicesList.SnMasonry.SnMasonryList4'),
+      ],
+    },
+    {
+      icon: Paintbrush,
+      title: t('services.servicesList.SnPainting.SnPaintingtitle'),
+      description: t('services.servicesList.SnPainting.SnPaintingdescription'),
+      features: [
+        t('services.servicesList.SnPainting.SnPaintingList1'),
+        t('services.servicesList.SnPainting.SnPaintingList2'),
+        t('services.servicesList.SnPainting.SnPaintingList3'),
+        t('services.servicesList.SnPainting.SnPaintingList4'),
+      ],
+    },
+    {
+      icon: Leaf,
+      title: t('services.servicesList.SnLandscape.SnLandsctitle'),
+      description: t('services.servicesList.SnLandscape.SnLandscapedescription'),
+      features: [
+        t('services.servicesList.SnLandscape.SnLandscapeList1'),
+        t('services.servicesList.SnLandscape.SnLandscapeList2'),
+        t('services.servicesList.SnLandscape.SnLandscapeList3'),
+        t('services.servicesList.SnLandscape.SnLandscapeList4'),
       ],
     },
     {
       icon: Home,
-      title: 'Renovation',
-      description: 'Complete renovation services to transform your space.',
+      title: t('services.servicesList.SnCeiling.SnCeilingtitle'),
+      description: t('services.servicesList.SnCeiling.SnCeilingdescription'),
       features: [
-        'Kitchen and bathroom remodeling',
-        'Structural modifications',
-        'Flooring installation',
-        'Custom built-ins',
+        t('services.servicesList.SnCeiling.SnCeilingList1'),
+        t('services.servicesList.SnCeiling.SnCeilingList2'),
+        t('services.servicesList.SnCeiling.SnCeilingList3'),
+        t('services.servicesList.SnCeiling.SnCeilingList4'),
+      ],
+    },
+    {
+      icon: Brush,
+      title: t('services.servicesList.SnTiling.SnTilingtitle'),
+      description: t('services.servicesList.SnTiling.SnTilingdescription'),
+      features: [
+        t('services.servicesList.SnTiling.SnTilingList1'),
+        t('services.servicesList.SnTiling.SnTilingList2'),
+        t('services.servicesList.SnTiling.SnTilingList3'),
+        t('services.servicesList.SnTiling.SnTilingList4'),
       ],
     },
     {
       icon: Ruler,
-      title: 'Space Planning',
-      description: 'Strategic space planning to maximize functionality and flow.',
+      title: t('services.servicesList.SnArchitecture.SnArchitecturetitle'),
+      description: t('services.servicesList.SnArchitecture.SnArchitecturedescription'),
       features: [
-        '2D and 3D floor plans',
-        'Traffic flow analysis',
-        'Furniture layout',
-        'Storage solutions',
-      ],
-    },
-    {
-      icon: Sofa,
-      title: 'Custom Furniture',
-      description: 'Bespoke furniture designed and crafted for your space.',
-      features: [
-        'Custom design and fabrication',
-        'Material selection',
-        'Upholstery services',
-        'Installation',
+        t('services.servicesList.SnArchitecture.SnArchitectureList1'),
+        t('services.servicesList.SnArchitecture.SnArchitectureList2'),
+        t('services.servicesList.SnArchitecture.SnArchitectureList3'),
+        t('services.servicesList.SnArchitecture.SnArchitectureList4'),
       ],
     },
     {
       icon: Clock,
-      title: 'Project Management',
-      description: 'End-to-end project management for seamless execution.',
+      title: t('services.servicesList.SnProject.SnProjecttitle'),
+      description: t('services.servicesList.SnProject.SnProjectdescription'),
       features: [
-        'Timeline development',
-        'Contractor coordination',
-        'Budget management',
-        'Quality control',
-      ],
-    },
-    {
-      icon: Settings,
-      title: 'Maintenance',
-      description: 'Ongoing maintenance services to keep your space perfect.',
-      features: [
-        'Regular inspections',
-        'Repairs and touch-ups',
-        'Furniture care',
-        'Seasonal updates',
+        t('services.servicesList.SnProject.SnProjectList1'),
+        t('services.servicesList.SnProject.SnProjectList2'),
+        t('services.servicesList.SnProject.SnProjectList3'),
+        t('services.servicesList.SnProject.SnProjectList4'),
+        t('services.servicesList.SnProject.SnProjectList5'),
       ],
     },
   ];
@@ -84,11 +144,8 @@ const ServicesPage: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-gray-200">
-              Comprehensive design and renovation solutions to transform your space 
-              into something extraordinary.
-            </p>
+            <h1 className="text-5xl font-bold mb-6">{t('services.title')}</h1>
+            <p className="text-xl text-gray-200">{t('services.description')}</p>
           </motion.div>
         </div>
       </section>
@@ -106,7 +163,7 @@ const ServicesPage: React.FC = () => {
                 className="bg-white rounded-lg shadow-lg p-8"
               >
                 <service.icon className="h-12 w-12 text-primary mb-6" />
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-3">{t(service.title)}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
@@ -123,24 +180,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl mx-auto"
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Space?</h2>
-            <p className="text-gray-600 mb-8">
-              Let's discuss your project and create something extraordinary together.
-            </p>
-            <Link to="/contact" className="btn-primary">
-              Schedule a Consultation
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      <FinalCTASection />
     </div>
   );
 };

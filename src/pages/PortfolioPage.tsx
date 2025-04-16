@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import FinalCTASection from '../components/CallToActionSection';
+import { useTranslation } from 'react-i18next';
 
 interface Project {
   id: string;
@@ -16,12 +18,13 @@ const PortfolioPage: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
+  const {t} = useTranslation('portfolio');
 
   const filters = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'residential', label: 'Residential' },
-    { id: 'commercial', label: 'Commercial' },
-    { id: 'hospitality', label: 'Hospitality' },
+    { id: 'all', label: t('portfolio.all') },
+    { id: 'residential', label: t('portfolio.residential') },
+    { id: 'commercial', label: t('portfolio.commercial') },
+    { id: 'hospitality', label: t('portfolio.hospitality') },
   ];
 
   useEffect(() => {
@@ -60,10 +63,8 @@ const PortfolioPage: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl font-bold mb-6">Our Portfolio</h1>
-            <p className="text-xl text-gray-200">
-              Explore our collection of thoughtfully designed spaces that showcase 
-              our commitment to excellence and innovation.
+            <h1 className="text-5xl font-bold mb-6">{t('portfolio.title')}</h1>
+            <p className="text-xl text-gray-200">{t('portfolio.description')}
             </p>
           </motion.div>
         </div>
@@ -120,23 +121,7 @@ const PortfolioPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Let's create something extraordinary together.
-            </p>
-            <a href="/contact" className="btn-primary">
-              Get in Touch
-            </a>
-          </motion.div>
-        </div>
-      </section>
+      <FinalCTASection />
     </div>
   );
 };

@@ -1,0 +1,28 @@
+{
+    "footer": {
+      "title": "SN Elegancy",
+      "description": "Transformer les espaces en expériences extraordinaires grâce à un design innovant et un savoir-faire exceptionnel.",
+      "links": {
+        "title": "Liens rapides",
+        "about": "À propos de nous",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "blog": "Blog"
+      },
+      "ourServices": {
+        "title": "Nos Service",
+        "furnitures": "SN Meubles et Design d'intérieur",
+        "plumbing": "SN Plomberie & Assainissement",
+        "electricity": "SN Électricité",
+        "masonry": "Maçonnerie",
+        "painting": "Peinture",
+        "Landscape": "Aménagement paysager",
+        "ceiling": "Plafonds et Toitures",
+        "tiling": "Carrelage",
+        "architecture": "Architecture",
+        "ProjectManagement": "Gestion de projet"
+      },
+      "contactUs": "Contactez-nous",
+      "rights": "Tous droits réservés."
+    }
+  }  
