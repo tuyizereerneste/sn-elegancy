@@ -36,7 +36,7 @@ const TestimonialsHome: React.FC = () => {
   return (
     <div className="pt-20">
       <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">{t('testimonials.WhatOurClients')}</h2>
+          <h2 className="text-4xl text-[#48352d] font-bold mb-4">{t('testimonials.WhatOurClients')}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">{t('testimonials.clientsDescription')}
           </p>
       </div>

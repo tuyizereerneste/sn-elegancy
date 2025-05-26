@@ -11,16 +11,10 @@
         },
         "ourServices": {
             "title": "Our Services",
-            "furnitures": "SN Furnitures and Interior Design",
-            "plumbing": "SN Plumbing & Sanitation",
-            "electricity": "SN Electricity",
-            "masonry": "Masonry",
-            "painting": "Painting",
-            "Landscape": "Landscaping",
-            "ceiling": "Ceiling and Roofing",
-            "tiling": "Tiling",
-            "architecture": "Architecture",
-            "ProjectManagement": "SN Project Management"
+            "furnitures": "SN Construction Services",
+            "plumbing": "SN Interior Design Services",
+            "electricity": "SN Renovation Services",
+            "masonry": "SN 3D Planning Services"
         },
         "contactUs": "Contact Us",
         "rights": "All rights reserved."

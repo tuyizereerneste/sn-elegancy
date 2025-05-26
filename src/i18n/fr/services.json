@@ -3,86 +3,39 @@
       "title": "Nos Services",
       "description": "Des solutions complètes de design et de rénovation pour transformer votre espace en quelque chose d'extraordinaire.",
       "servicesList": {
-        "SnFurnitures": {
-          "SnFurniturestitle": "SN Meubles et Design d'Intérieur",
-          "SnFurnituresdescription": "Transformez votre espace avec nos services de meubles sur mesure et de design d'intérieur.",
-          "SnFurnituresList1": "Conception de meubles sur mesure",
-          "SnFurnituresList2": "Planification de l'espace",
-          "SnFurnituresList3": "Sélection des couleurs et des matériaux",
-          "SnFurnituresList4": "Conception d'éclairage"
+        "Construction": {
+          "ConstructionTitle": "Services de Construction SN",
+          "ConstructionDescription": "De la conception à la réalisation, nous offrons des solutions de construction fiables et de haute qualité, adaptées à votre vision.",
+          "ConstructionList1": "Construction résidentielle sur mesure",
+          "ConstructionList2": "Projets de construction commerciale et industrielle",
+          "ConstructionList3": "Gestion de projet de A à Z",
+          "ConstructionList4": "Rénovation, restauration et remodelage"
         },
-        "SnPlumbing": {
-          "SnPlumbingtitle": "SN Plomberie et Assainissement",
-          "SnPlumbingdescription": "Solutions de plomberie expertes pour les propriétés résidentielles et commerciales.",
-          "SnPlumbingList1": "Installation et réparation de tuyaux",
-          "SnPlumbingList2": "Nettoyage et entretien des canalisations",
-          "SnPlumbingList3": "Services de chauffe-eau",
-          "SnPlumbingList4": "Plomberie d'urgence"
+        "InteriorDesign": {
+          "InteriorDesignTitle": "Services de Design d'Intérieur SN",
+          "InteriorDesignDescription": "Transformez vos espaces grâce à des solutions de design intérieur raffinées, fonctionnelles et personnalisées, adaptées à votre mode de vie.",
+          "InteriorDesignList1": "Planification de l'espace et conception optimisée",
+          "InteriorDesignList2": "Sélection et disposition stratégique du mobilier",
+          "InteriorDesignList3": "Coordination des palettes de couleurs et des matériaux",
+          "InteriorDesignList4": "Conception de l'éclairage et conseil en décoration"
         },
-        "SnElectricity": {
-          "SnElectricitytitle": "SN Électricité",
-          "SnElectricitydescription": "Services électriques sûrs et fiables pour tous vos besoins.",
-          "SnElectricityList1": "Câblage et recâblage",
-          "SnElectricityList2": "Installation d'éclairage",
-          "SnElectricityList3": "Réparations électriques",
-          "SnElectricityList4": "Inspections de sécurité"
+
+        "Renovation": {
+          "RenovationTitle": "Services de Rénovation SN",
+          "RenovationDescription": "Redonnez vie à vos espaces grâce à des solutions de rénovation expertes, alliant fonctionnalité, esthétique et savoir-faire.",
+          "RenovationList1": "Rénovation complète de la maison",
+          "RenovationList2": "Rénovation de cuisines et salles de bains",
+          "RenovationList3": "Pose de revêtements de sol et carrelage",
+          "RenovationList4": "Peinture intérieure et extérieure, finitions"
         },
-        "SnMasonry": {
-          "SnMasonrytitle": "SN Maçonnerie",
-          "SnMasonrydescription": "Travaux de maçonnerie de haute qualité pour des structures durables et esthétiques.",
-          "SnMasonryList1": "Travail de briques et de pierres",
-          "SnMasonryList2": "Coulage et finition de béton",
-          "SnMasonryList3": "Murs de soutènement et patios",
-          "SnMasonryList4": "Réparations et restauration de maçonnerie"
-        },
-        "SnPainting": {
-          "SnPaintingtitle": "SN Peinture",
-          "SnPaintingdescription": "Services de peinture professionnels pour sublimer votre espace.",
-          "SnPaintingList1": "Peinture intérieure et extérieure",
-          "SnPaintingList2": "Consultation de couleurs",
-          "SnPaintingList3": "Préparation des surfaces",
-          "SnPaintingList4": "Options de peinture écologique"
-        },
-        "SnLandscape": {
-          "SnLandsctitle": "SN Paysagisme",
-          "SnLandscapedescription": "Créez des espaces extérieurs époustouflants grâce à nos services d'aménagement paysager.",
-          "SnLandscapeList1": "Conception de jardins",
-          "SnLandscapeList2": "Plantation et entretien",
-          "SnLandscapeList3": "Aménagement paysager dur",
-          "SnLandscapeList4": "Entretien et soin"
-        },
-        "SnCeiling": {
-          "SnCeilingtitle": "SN Plafonds et Toitures",
-          "SnCeilingdescription": "Solutions expertes en plafonds et toitures pour votre maison ou votre entreprise.",
-          "SnCeilingList1": "Installation et réparation de toits",
-          "SnCeilingList2": "Installation de plafonds",
-          "SnCeilingList3": "Services d'isolation",
-          "SnCeilingList4": "Systèmes de gouttières"
-        },
-        "SnTiling": {
-          "SnTilingtitle": "SN Carrelage",
-          "SnTilingdescription": "Services de carrelage professionnels pour sols, murs et plus encore.",
-          "SnTilingList1": "Carrelage de sol",
-          "SnTilingList2": "Carrelage mural",
-          "SnTilingList3": "Conceptions de carrelage sur mesure",
-          "SnTilingList4": "Application de joints et de scellant"
-        },
-        "SnArchitecture": {
-          "SnArchitecturetitle": "SN Architecture",
-          "SnArchitecturedescription": "Conceptions architecturales innovantes adaptées à vos besoins.",
-          "SnArchitectureList1": "Conception de bâtiments",
-          "SnArchitectureList2": "Planification de site",
-          "SnArchitectureList3": "Assistance pour les permis",
-          "SnArchitectureList4": "Design durable"
-        },
-        "SnProject": {
-          "SnProjecttitle": "SN Gestion de Projet",
-          "SnProjectdescription": "Gestion de projet efficace pour garantir l'achèvement dans les délais et le respect du budget.",
-          "SnProjectList1": "Élaboration du calendrier",
-          "SnProjectList2": "Coordination des entrepreneurs",
-          "SnProjectList3": "Gestion du budget",
-          "SnProjectList4": "Gestion des risques",
-          "SnProjectList5": "Contrôle de la qualité"
+
+        "3DPlans": {
+          "3DPlansTitle": "Services de Planification 3D SN",
+          "3DPlansDescription": "Donnez vie à vos projets grâce à des solutions de planification 3D immersives, alliant clarté, précision et impact visuel.",
+          "3DPlansList1": "Modélisation et visualisation 3D architecturales",
+          "3DPlansList2": "Rendus d'intérieurs et aperçus d'aménagement",
+          "3DPlansList3": "Visites virtuelles interactives",
+          "3DPlansList4": "Rendus 3D haute qualité et animations"
         }
       }
     }

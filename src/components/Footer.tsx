@@ -58,12 +58,6 @@ const Footer: React.FC = () => {
               <li>{t('footer.ourServices.plumbing')}</li>
               <li>{t('footer.ourServices.electricity')}</li>
               <li>{t('footer.ourServices.masonry')}</li>
-              <li>{t('footer.ourServices.painting')}</li>
-              <li>{t('footer.ourServices.Landscape')}</li>
-              <li>{t('footer.ourServices.ceiling')}</li>
-              <li>{t('footer.ourServices.tiling')}</li>
-              <li>{t('footer.ourServices.architecture')}</li>
-              <li>{t('footer.ourServices.ProjectManagement')}</li>
             </ul>
           </div>
 
