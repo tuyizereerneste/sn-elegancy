@@ -11,16 +11,10 @@
       },
       "ourServices": {
         "title": "Nos Service",
-        "furnitures": "SN Meubles et Design d'intérieur",
-        "plumbing": "SN Plomberie & Assainissement",
-        "electricity": "SN Électricité",
-        "masonry": "Maçonnerie",
-        "painting": "Peinture",
-        "Landscape": "Aménagement paysager",
-        "ceiling": "Plafonds et Toitures",
-        "tiling": "Carrelage",
-        "architecture": "Architecture",
-        "ProjectManagement": "Gestion de projet"
+        "furnitures": "Services de Design d'Intérieur SN",
+        "plumbing": "Services de Design d'Intérieur SN",
+        "electricity": "Services de Rénovation SN",
+        "masonry": "Services de Planification 3D SN"
       },
       "contactUs": "Contactez-nous",
       "rights": "Tous droits réservés."
