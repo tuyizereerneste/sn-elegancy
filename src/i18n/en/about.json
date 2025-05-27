@@ -8,24 +8,36 @@
         "DesignAwards": "Design Awards",
         "ourStory": "Our Story",
         "p1": "What began as a passion for design has evolved into a trusted name in interior design and renovation. Our reputation is built on a foundation of creativity, craftsmanship, and a deep understanding of our clients' unique visions.",
-        "p2": "We believe every space holds the potential to inspire, and we're here to unlock that potential beautifully and intentionally.",
-        "p3": "From cozy homes to bold commercial spaces, we bring dreams to life, one room at a time redefining elegance, setting trends, and exceeding expectations every step of the way.",
+        "p2": "SN elegancy is a construction company with an aim to transform spaces into functional and aesthetically pleasing environments. We specialize in renovations, custom construction projects, 3D architectural planning, and interior design that brings your vision to life. ",
+        "p3": "We believe every space holds the potential to inspire, and we're here to unlock that potential beautifully and intentionally.",
         "MissionTitle": "Our Mission",
         "missionDescription": "Our mission is to transform spaces into inspiring, functional, and beautiful environments that reflect our clients' unique personalities and needs. We strive to exceed expectations through innovative design, exceptional craftsmanship, and unparalleled customer service.",
         "vissionTitle": "Our Vision",
         "vissionDescription": "Our vision is to be the leading interior design firm, recognized for our creativity, integrity, and the positive impact we have on people's lives through the spaces we create. We aim to inspire and set trends in the industry while fostering long-lasting relationships with our clients.",
         "valuesTitle": "Our Core Values",
         "value1": {
-            "value1Title": "Integrity",
-            "value1Description": "We uphold the highest standards of honesty and transparency in all our actions."
+            "value1Title": "Elegancy in Every Detail",
+            "value1Description": "We believe beauty is found in precision. Every choice we make-from layout to lighting-is rooted in timeless design and intentional luxury."
         },
         "value2": {
-            "value2Title": "Innovation",
-            "value2Description": "We foster creativity and embrace new ideas to stay at the forefront of design trends."
+            "value2Title": "Honesty as Our Foundation",
+            "value2Description": "We lead with transparency, speak with truth, and deliver what we promise. Integrity guides every relationship, every decision, every build."
         },
         "value3": {
-            "value3Title": "Excellence",
-            "value3Description": "We are committed to delivering exceptional quality in every project we undertake."
+            "value3Title": "A Deep Love for Design",
+            "value3Description": "Design is not just our skill- it's our calling. We are driven by a genuine passion to shape spaces that stir emotion, function beautifully, and feel like home."
+        },
+        "value4": {
+            "value4Title": "Connection to Nature",
+            "value4Description": "We honor the environment in both concept and construction. Our work invites nature indoors and ensures our designs breathe with life, light, and purpose."
+        },
+        "value5": {
+            "value5Title": "Community at the Core",
+            "value5Description": "We build to serve. Our goal is to create not just elegant homes, but spaces that enrich the lives of those who live in them-and the communities around them."
+        },
+        "value6": {
+            "value6Title": "Innovation with Purpose",
+            "value6Description": "We embrace evolving technology and design trends not for trend's sake, but to elevate our creativity, efficiency, and the experience we give each client."
         },
         "meetOurTeamTitle": "Meet Our Team",
         "meetOurTeamDescription": "Our talented team of designers, architects, and project managers work together to bring your vision to life.",

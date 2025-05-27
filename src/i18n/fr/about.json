@@ -13,20 +13,39 @@
       "MissionTitle": "Notre mission",
       "missionDescription": "Notre mission est de transformer les espaces en environnements inspirants, fonctionnels et esthétiques qui reflètent la personnalité et les besoins uniques de nos clients. Nous nous efforçons de dépasser les attentes grâce à un design innovant, un savoir-faire exceptionnel et un service client inégalé.",
       "vissionTitle": "Notre vision",
-      "vissionDescription": "Notre vision est d’être le cabinet de design d’intérieur de référence, reconnu pour notre créativité, notre intégrité et l’impact positif que nous avons sur la vie des gens à travers les espaces que nous créons. Nous visons à inspirer et à lancer des tendances dans l’industrie tout en entretenant des relations durables avec nos clients.",
+      "vissionDescription": "Notre vision est d'être le cabinet de design d'intérieur de référence, reconnu pour notre créativité, notre intégrité et l’impact positif que nous avons sur la vie des gens à travers les espaces que nous créons. Nous visons à inspirer et à lancer des tendances dans l’industrie tout en entretenant des relations durables avec nos clients.",
       "valuesTitle": "Nos valeurs fondamentales",
+
       "value1": {
-        "value1Title": "Intégrité",
-        "value1Description": "Nous maintenons les normes les plus élevées d'honnêteté et de transparence dans toutes nos actions."
+          "value1Title": "Élégance dans chaque détail",
+          "value1Description": "Nous croyons que la beauté réside dans la précision. Chaque choix que nous faisons - de l’agencement à l’éclairage – repose sur un design intemporel et un luxe réfléchi."
       },
+
       "value2": {
-        "value2Title": "Innovation",
-        "value2Description": "Nous encourageons la créativité et accueillons de nouvelles idées pour rester à l'avant-garde des tendances du design."
+          "value2Title": "L'honnêteté comme fondement",
+          "value2Description": "Nous agissons avec transparence, parlons avec sincérité et tenons nos promesses. L'intégrité guide chaque relation, chaque décision, chaque réalisation."
       },
+
       "value3": {
-        "value3Title": "Excellence",
-        "value3Description": "Nous nous engageons à fournir une qualité exceptionnelle dans chaque projet que nous réalisons."
+        "value3Title": "Un amour profond pour le design",
+        "value3Description": "Le design n'est pas seulement notre compétence - c'est notre vocation. Nous sommes animés par une passion sincère pour créer des espaces qui suscitent l’émotion, allient fonctionnalité et beauté, et donnent un vrai sentiment de chez-soi."
       },
+
+      "value4": {
+        "value4Title": "Connexion à la nature",
+        "value4Description": "Nous honorons l'environnement, tant dans nos concepts que dans nos réalisations. Notre travail fait entrer la nature à l’intérieur et veille à ce que nos créations respirent la vie, la lumière et le sens."
+      },
+
+      "value5": {
+        "value5Title": "La communauté au cœur de tout",
+        "value5Description": "Nous construisons pour servir. Notre objectif est de créer non seulement des maisons élégantes, mais aussi des espaces qui enrichissent la vie de ceux qui y habitent – et des communautés qui les entourent."
+      },
+
+      "value6": {
+        "value6Title": "Innovation avec intention",
+        "value6Description": "Nous adoptons les technologies et tendances en évolution, non pas par simple effet de mode, mais pour enrichir notre créativité, améliorer notre efficacité et offrir une expérience exceptionnelle à chaque client."
+      },
+
       "meetOurTeamTitle": "Rencontrez notre équipe",
       "meetOurTeamDescription": "Notre talentueuse équipe de designers, architectes et chefs de projet travaille ensemble pour donner vie à votre vision.",
       "team1": {
