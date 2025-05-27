@@ -36,6 +36,10 @@
                 "3DPlansList3": "Interactive virtual walkthroughs",
                 "3DPlansList4": "High-quality 3D rendering and animations"
             }
+        },
+        "ViewInAction": {
+            "ViewInActionTitle": "Discover Our Work in Action",
+            "ViewInActionDescription": "Watch how we transform ideas into reality through our expert services."
         }
     }
 }

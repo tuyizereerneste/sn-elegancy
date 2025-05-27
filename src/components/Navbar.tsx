@@ -49,21 +49,28 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-lg font-medium text-white hover:text-primary-light transition"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
 
-            {/* Language Switcher*/}
+              return (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={`text-lg font-medium transition ${
+                    isActive ? 'text-primary-light font-semibold' : 'text-white hover:text-primary-light'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+
+            {/* Language Switcher */}
             <LanguageSelector />
 
             <Link to="/login" className="btn-primary px-4 py-2 text-sm">{t('navbar.login')}</Link>
           </div>
+
 
           {/* Mobile Menu Button */}
           <button
@@ -80,33 +87,40 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        {isOpen && (
-          <div className="md:hidden mt-2 rounded bg-white shadow-md">
-            <div className="px-4 py-4 space-y-2">
-              {navLinks.map((link) => (
+      {isOpen && (
+        <div className="md:hidden mt-2 rounded bg-white shadow-md">
+          <div className="px-4 py-4 space-y-2">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+
+              return (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="block text-gray-700 hover:text-primary"
+                  className={`block transition ${
+                    isActive ? 'text-primary font-semibold' : 'text-gray-700 hover:text-primary'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </Link>
-              ))}
+              );
+            })}
 
-              {/* Language Switcher for Mobile */}
-              <LanguageSelector />
+            {/* Language Switcher for Mobile */}
+            <LanguageSelector />
 
-              <Link
-                to="/login"
-                className="block w-full text-center mt-3 btn-primary py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                Login
-              </Link>
-            </div>
+            <Link
+              to="/login"
+              className="block w-full text-center mt-3 btn-primary py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Login
+            </Link>
           </div>
-        )}
+        </div>
+      )}
+
       </div>
     </nav>
   );

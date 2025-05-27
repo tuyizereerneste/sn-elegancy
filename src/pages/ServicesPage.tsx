@@ -27,7 +27,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Wrench,
-      media: '/38r.jpeg',
+      media: '/54h.jpeg',
       title: t('services.servicesList.InteriorDesign.InteriorDesignTitle'),
       description: t('services.servicesList.InteriorDesign.InteriorDesignDescription'),
       features: [
@@ -39,7 +39,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Lightbulb,
-      media: '/54h.jpeg',
+      media: '/38r.jpeg',
       title: t('services.servicesList.Renovation.RenovationTitle'),
       description: t('services.servicesList.Renovation.RenovationDescription'),
       features: [
@@ -51,7 +51,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Layers,
-      media: '/image.jpg',
+      media: '/planning.jpg',
       title: t('services.servicesList.3DPlans.3DPlansTitle'),
       description: t('services.servicesList.3DPlans.3DPlansDescription'),
       features: [
@@ -100,7 +100,7 @@ const ServicesPage: React.FC = () => {
               </div>
               <div className="flex-1">
                 <service.icon className="h-10 w-10 text-primary mb-4" />
-                <h3 className="text-3xl font-semibold mb-4">{service.title}</h3>
+                <h3 className="text-3xl text-[#48352d] font-semibold mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
@@ -120,15 +120,15 @@ const ServicesPage: React.FC = () => {
       <section className="py-20 bg-gray-100">
         <div className="container">
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold mb-4">Discover Our Work in Action</h2>
-            <p className="text-gray-600">Watch how we transform ideas into reality through our expert services.</p>
+            <h2 className="text-4xl text-primary font-bold mb-4">{t('services.ViewInAction.ViewInActionTitle')}</h2>
+            <p className="text-gray-600">{t('services.ViewInAction.ViewInActionDescription')}.</p>
           </div>
           <div className="w-full max-w-5xl mx-auto bg-white p-4 rounded-2xl shadow-lg">
             <video
               controls
               muted
-              poster="/4h.jpeg"
-              className="w-full h-auto rounded-xl"
+              poster="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop"
+              className="w-full h-[500px] rounded-xl"
             >
               <source src="/video1.MP4" type="video/mp4" />
               Your browser does not support the video tag.

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Users, Clock, Target } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import FinalCTASection from '../components/CallToActionSection';
 
 const AboutPage: React.FC = () => {
   const { t } = useTranslation('about');
@@ -154,7 +155,19 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="text-gray-600">
                 <h3 className="text-2xl font-bold mb-2">{t('about.value3.value3Title')}</h3>
-                <p>{t('about.value3.value2Description')}</p>
+                <p>{t('about.value3.value3Description')}</p>
+              </div>
+              <div className="text-gray-600">
+                <h3 className="text-2xl font-bold mb-2">{t('about.value4.value4Title')}</h3>
+                <p>{t('about.value4.value4Description')}</p>
+              </div>
+              <div className="text-gray-600">
+                <h3 className="text-2xl font-bold mb-2">{t('about.value5.value5Title')}</h3>
+                <p>{t('about.value5.value5Description')}</p>
+              </div>
+              <div className="text-gray-600">
+                <h3 className="text-2xl font-bold mb-2">{t('about.value6.value6Title')}</h3>
+                <p>{t('about.value6.value6Description')}</p>
               </div>
             </div>
           </motion.div>
@@ -162,7 +175,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -197,7 +210,8 @@ const AboutPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      <FinalCTASection />
     </div>
   );
 };
